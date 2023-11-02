@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-shadow: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f4c531;
+}
+
+.container {
+    font-size: 16px;
+    background-color: #fff;
+    width: 90vw;
+    max-width: 34em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+}
+
+.options__container {
+    text-align: center;
+}
+
+.options__container div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0 2.4em 0;
+}
+
+.options__container button {
+    padding: 0.6em 1.2em;
+    border: 3px solid #000;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+}
+
+.options__container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
+}
+
+.options__container button.active {
+    background-color: #f4c531;
+    border: 3px solid #000;
+    color: #000;
+}
+
+.options__container button:hover {
+    cursor: pointer;
+    background-color: #f4c531;
+}
+
+.letter__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+}
+
+.letter__container button {
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 0.3em;
+    background-color: #fff;
+}
+
+.new-game__poup {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
+}
+
+
+canvas{
+    display: block;
+    margin:auto;
+    border: 2px solid #000;
+
+}
+
+.hide {
+    display: none;
+}
+
+.user-input{
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    margin: 0.6em 1.2em 0;
+}
+
+.result-txt h2{
+font-size: 1.8em;
+text-align: center;
+}
+
+.result-txt p{
+    font-size: 1.25em;
+    margin:1em 0 2em 0
+}
+
+.result-txt span{
+    font-weight: 600;
+}
+
+.new-game__button{
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: #f4c531;
+    border: 3px solid #000;
+    color: #000;
+    border-radius: 0.2em;
+}
+
+.win-msg{
+    color: #39d78d;
+}
+
+.lose-msg{
+    color: #fe5152;
+}
