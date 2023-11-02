@@ -24,7 +24,7 @@ let options = {
         "Тигр",
         "Пантера"
     ],
-    counties: [
+    countries: [
         "Россия",
         "Италия",
         "Испания",
@@ -38,6 +38,13 @@ let options = {
     ]
 }
 
+let translate = {
+    fruits: "Фрукты",
+    animals: "Животные",
+    countries: "Страны"
+}
+
+
 let winCount = 0
 let count = 0
 
@@ -48,15 +55,15 @@ const displayOptions = () => {
     optionsContainer.innerHTML += `<h3>Выберите категорию</h3>`
     let buttonCon = document.createElement('div')
     for (let value in options) {
-        buttonCon.innerHTML += `<button class="options" onclick="generateWorld('${value}')">
-        ${value}</button>`
+        buttonCon.innerHTML += `<button class="options" value=${value} onclick="generateWorld('${value}')">
+        ${translate[value].toUpperCase()}</button>`
     }
     optionsContainer.appendChild(buttonCon)
 }
 
 function blocker() {
-    let optionsButtons = document.querySelectorAll('options')
-    let letterButtons = document.querySelectorAll('lettes')
+    let optionsButtons = document.querySelectorAll('.options')
+    let letterButtons = document.querySelectorAll('.letters')
     optionsButtons.forEach(button => {
         button.disabled = true
     })
@@ -70,7 +77,7 @@ function blocker() {
 function generateWorld(optionValue) {
     let optionsButtons = document.querySelectorAll('.options')
     optionsButtons.forEach((button) => {
-        if (button.innerText.toLowerCase() === optionValue) {
+        if (button.value.toLowerCase() === optionValue) {
             button.classList.add("active")
         }
         button.disabled = true
