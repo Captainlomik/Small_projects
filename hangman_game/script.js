@@ -128,7 +128,7 @@ function initilizer() {
                             resultText.innerHTML = `
                             <h2 class="win-msg">Ты выиграл!!</h2>
                             <p> Загаданое слово -<span> ${chosenWorld}</span></p>`
-
+                            winCount = 0
                             blocker()
                         }
                     }
@@ -142,6 +142,7 @@ function initilizer() {
                             <h2 class="lose-msg">Ты проиграл! =(</h2>
                             <p>Загаданое слово <span> ${chosenWorld}</span></p>`
                     blocker()
+                    winCount = 0
                 }
             }
             button.disabled = true
